@@ -4,7 +4,7 @@
  * Tanggal      : Jum'at, 20 Februari 2026
 */
 public class Titik {
-    /*************ATRIBUT************* */
+    /*************ATRIBUT**************/
     double absis;
     double ordinat;
 
