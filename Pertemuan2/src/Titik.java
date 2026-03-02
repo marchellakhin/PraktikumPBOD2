@@ -3,19 +3,28 @@
  * Pembuat      : Marchella Arkhina Ratunesia
  * Tanggal      : Selasa, 24 Februari 2026
 */
-public class Titik1 {
+public class Titik {
     /*************ATRIBUT**************/
     double absis;
     double ordinat;
-    static int countterTitik = 0;
+    static int counterTitik = 0;
 
     /*************METHOD************* */
     //konstruktor untuk membuat titik (0,0)
 
-    Titik1(double x, double y) {
-        absis = x;
-        ordinat = y;
-        countterTitik++;
+    Titik(double x, double y) {
+        this.absis = x;
+        this.ordinat = y;
+        counterTitik++;
+    }
+
+    static int getCounterTitik() {
+        return counterTitik;
+    }
+
+    //konstruktor untuk membuat titik (0,0)
+    Titik() {
+        this(0,0);
     }
 
     //mengembalikan nilai absis
@@ -45,30 +54,50 @@ public class Titik1 {
     }
 
     int getKuadran() {
-        if((absis > 0) && (ordinat > 0)) {
+        if((absis > 0 && ordinat > 0)) {
             return 1;
         }
-        if((absis < 0) && (ordinat > 0)) {
+        if((absis < 0 && ordinat > 0)) {
             return 2;
         }
-        if((absis < 0) && (ordinat < 0)) {
+        if((absis < 0 && ordinat < 0)) {
             return 3;
         }
-        if((absis > 0) && (ordinat < 0)) {
+        if((absis > 0 && ordinat < 0)) {
             return 4;
         } else {
             return 0;
         }
     }
 
-    Titik1 getRefleksiX() {
-        Titik1 T = new Titik1(abis, ordinat*-1);
-        return T;
+    double getJarakPusat() {
+        return Math.sqrt(absis*absis+ordinat*ordinat);
     }
 
+    double getJarak(Titik M) {
+        double dx = absis - M.absis;
+        double dy = ordinat - M.ordinat;
+        return Math.sqrt(dx*dx+dy*dy);
+    }
+
+    void refleksiX() {
+        ordinat = -ordinat;
+    }
+
+    void refleksiY() {
+        absis = -absis;
+    }
+
+    Titik getRefleksiX() {
+        return new Titik(absis, -ordinat);
+    }
+
+    Titik getRefleksiY() {
+        return new Titik(-absis, ordinat);
+    }
 
     void printcounterTitik() {
-        System.out.println(this.countterTitik);
+        System.out.println(Titik.counterTitik);
     }
 
     //mencetak koordinat titik
