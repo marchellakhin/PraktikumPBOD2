@@ -5,7 +5,7 @@
 */
 public class MTitik {
     public static void main(String[] args) {
-        Titik T0 = new Titik(); //Membuat objek titik T0 (0,0)
+        //Titik T0 = new Titik(); //Membuat objek titik T0 (0,0)
         Titik T1 = new Titik(3, 4);
         
         //setAbsis
