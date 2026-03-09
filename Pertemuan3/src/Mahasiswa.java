@@ -13,6 +13,7 @@ public class Mahasiswa {
     ArrayList<MataKuliah> listMatkul;
     private Dosen dosenWali;
     private Kendaraan kendaraan;
+    private int sks;
 
 public Mahasiswa(String nim, String nama, String prodi) {
     this.nim = nim;
@@ -44,13 +45,32 @@ public Mahasiswa(String nim, String nama, String prodi) {
         listMatkul.add(newMatKul);
     }
 
+    public int getSKS() {
+        return sks;
+    }
+
+    public int getJumlahSKS() {
+        int jumlah = 0;
+        int i;
+        for(i = 0; i < listMatkul.size(); i++) {
+            jumlah += listMatkul.get(i).getSKS();
+        }
+        return jumlah;
+    }
+
     public int getJumlahMatKul() {
         int jumlah = 0;
         int i;
-        for(i=0; i<listMatkul.size(); i++) {
-            jumlah+=1;
+        for(i = 0; i < listMatkul.size(); i++) {
+            jumlah += 1;
         }
         return jumlah;
+    }
+
+    public void printMhs() {
+        System.out.println("NIM: " + nim);
+        System.out.println("Nama: " + nama);
+        System.out.println("Prodi: " + prodi);
     }
 
     public void printDetailMhs() {
