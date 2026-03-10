@@ -7,6 +7,7 @@
 public class MBangunDatar {
     public static void main(String[] args) {
         Persegi M = new Persegi(4, "Hitam", "Putih");
+        M.printInfo();
         System.out.println("Jumlah Sisi = " + M.getJmlSisi());
         System.out.println("Luas Persegi = " + M.getLuas());
         System.out.println("Keliling Persegi = " + M.getKeliling());
