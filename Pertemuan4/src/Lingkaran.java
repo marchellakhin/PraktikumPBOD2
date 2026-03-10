@@ -24,18 +24,18 @@ public class Lingkaran extends BangunDatar {
         this.jari = jari;
     }
 
-    // public double getLuas() {
-    //     return ;
-    // }
+    public double getLuas() {
+        return Math.PI * jari * jari;
+    }
 
-    // public double getKeliling() {
-    //     return;
-    // }
+    public double getKeliling() {
+        return 2 * Math.PI * jari;
+    }
 
     @Override
     public void printInfo() {
         System.out.println("Warna: " + getWarna());
         System.out.println("Border: " + getBorder());
-        System.out.println("Jari: " + jari);
+        System.out.println("Jari: " + getJari());
     }
 }
