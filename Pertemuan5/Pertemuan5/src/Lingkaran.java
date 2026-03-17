@@ -1,7 +1,7 @@
 /* Nama File    : Lingkaran.java
  * Deskripsi    : berisi atribut dan method dalam class Lingkaran
  * Pembuat      : Marchella Arkhina Ratunesia
- * Tanggal      : Selasa, 10 Maret 2026
+ * Tanggal      : Selasa, 17 Maret 2026
 */
 
 public class Lingkaran extends BangunDatar {

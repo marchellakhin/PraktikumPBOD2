@@ -1,7 +1,7 @@
 /* Nama File    : Persegi.java
  * Deskripsi    : berisi atribut dan method dalam class Persegi
  * Pembuat      : Marchella Arkhina Ratunesia
- * Tanggal      : Selasa, 10 Maret 2026
+ * Tanggal      : Selasa, 17 Maret 2026
 */
 
 public class Persegi extends BangunDatar {
