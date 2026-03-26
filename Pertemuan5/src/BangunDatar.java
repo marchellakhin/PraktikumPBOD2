@@ -5,11 +5,9 @@
 */
 
 public abstract class BangunDatar {
-    public int jmlSisi;
-    public String warna;
-    public String border;
-    public abstract double getLuas();
-    public abstract double getKeliling();
+    private int jmlSisi;
+    protected String warna;
+    protected String border;
 
     public BangunDatar() {
 
@@ -49,5 +47,16 @@ public abstract class BangunDatar {
         System.out.println("Jumlah sisi: " + jmlSisi);
         System.out.println("Warna: " + warna);
         System.out.println("Border: " + border);
+    }
+
+    public abstract double getLuas();
+    public abstract double getKeliling();
+
+    public boolean isEqualLuas(BangunDatar X) {
+        return this.getLuas() == X.getLuas();
+    }
+
+    public boolean isEqualKeliling(BangunDatar X) {
+        return this.getKeliling() == X.getKeliling();
     }
 }
