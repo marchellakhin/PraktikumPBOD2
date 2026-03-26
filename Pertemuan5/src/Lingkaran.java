@@ -4,11 +4,11 @@
  * Tanggal      : Selasa, 17 Maret 2026
 */
 
-public class Lingkaran extends BangunDatar {
+public class Lingkaran extends BangunDatar implements IResize {
     private double jari;
     
     public Lingkaran() {
-        
+
     }
 
     public Lingkaran(double diameter, String warna, String border) {
@@ -24,10 +24,12 @@ public class Lingkaran extends BangunDatar {
         this.jari = jari;
     }
 
+    @Override
     public double getLuas() {
         return Math.PI * jari * jari;
     }
 
+    @Override
     public double getKeliling() {
         return 2 * Math.PI * jari;
     }
@@ -37,5 +39,20 @@ public class Lingkaran extends BangunDatar {
         System.out.println("Warna: " + getWarna());
         System.out.println("Border: " + getBorder());
         System.out.println("Jari: " + getJari());
+    }
+
+    @Override
+    public void zoomIn() {
+        jari = jari * 1.1;
+    }
+
+    @Override
+    public void zoomOut() {
+        jari = jari * 0.9;
+    }
+
+    @Override
+    public void zoom(int percent) {
+        jari = jari * percent / 100;
     }
 }
