@@ -71,9 +71,9 @@ public class Teman<T> {
         }
     }
 
-    public int countnama(T nama) {
+    // public int countnama(T nama) {
 
-    }
+    // }
 
     public void showTeman() {
         for(int i = 0; i < nbelm; i++) {
