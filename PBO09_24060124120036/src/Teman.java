@@ -1,4 +1,4 @@
-/* nama File    : Anabul.java
+/* nama File    : Teman.java
  * Deskripsi    : Berisi Class Teman
  * Pembuat      : Marchella Arkhina Ratunesia
  * Tanggal      : Selasa, 05 Mei 2026
@@ -71,17 +71,19 @@ public class Teman<T> {
         }
     }
 
-    // public int countnama(T nama) {
-
-    // }
+    public int countnama(T nama) {
+    int count = 0;
+    for(int i = 0; i < nbelm; i++) {
+        if(getnama(i).equals(nama)) {
+            count++;
+        }
+    }
+    return count;
+    }
 
     public void showTeman() {
         for(int i = 0; i < nbelm; i++) {
             System.out.println(getnama(i));
         }
-
     }
-
-
-
 }
